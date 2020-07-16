@@ -1,6 +1,5 @@
 import { Component,OnInit} from '@angular/core';
 import {Post} from '../social';
-import {NgForm} from '@angular/forms'
 
 @Component({
   selector: 'app-social-posts',
@@ -8,22 +7,29 @@ import {NgForm} from '@angular/forms'
   styleUrls: ['./social-posts.component.css']
 })
 
-export class SocialPostsComponent  {
-  submitPost = (f: NgForm) => this.submitted.emit({title: f.value.title, thought: f.value.thought});
-posts: Post[] = [];
+export class SocialPostsComponent implements OnInit {
 
+  constructor() { }
 
-onSubmit(event: object) {
-  this.posts.push(event);
-}
+  ngOnInit(): void {
+  }
+  formDisplay: boolean = false;
 
-isDisplay = true;
-toggleDisplay(){
-  this.isDisplay =!this.isDisplay;
-}
+  posts: Post[] = []
+  
+  onDelete = (el) => this.posts.splice(this.posts.indexOf(el), 1);
+  toggleDisplay = () => {
+    (this.formDisplay === true)? this.formDisplay = false : this.formDisplay = true;
+    (this.toState === 'state1')? this.changeState('state2') : this.changeState('state1');
+  }
+  onSubmit = (event: Post) => {
+    this.toggleDisplay();
+    this.posts.unshift(event);
+  }
 
-deletePost(index: number){
-  this.posts.splice(index, 1);
-}
+  toState: string = 'state1';
 
+  changeState(state: string): void {
+    this.toState = state;
+  }
 }

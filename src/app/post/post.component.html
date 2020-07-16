@@ -1,10 +1,7 @@
-<ul class="post-list">
-    <h1>POSTS:</h1> 
-    <li *ngFor="let post of posts; index as i">
-        <div class ="PostContainer">
-            <span class="titlePost">Title: {{ post.title }}</span>
-              <span class="thoughtPost">Thought: {{post.thought}}</span> 
-        </div>
-       <button class="remove" (click)="deletePost(i)">Remove Post</button>
-    </li>
-</ul>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<li *ngFor="let el of posts">
+    <h2 id="post-title"> Title: {{el.title}}</h2>
+    <h3 id="post-thought">Thought: {{el.thought}}</h3>
+    <h4>{{total}}</h4>
+    <button id="delete" (click)="deletePost(el)">Remove Post</button>
+</li>

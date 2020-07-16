@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
-    <title>Document</title>
-</head>
+<body class= "body">
 <div class="page-container">
-<h1 class="pageTitle">My Thoughts</h1>
-<button class="newThoughtBtn" (click)="toggleDisplay()">New Thought</button>
-<app-post *ngFor="let post of posts" [post]="post"></app-post>
-<app-post-form [hidden] ="isDisplay" (submit)="onSubmit($event)"></app-post-form>
+    <h1 class="pageTitle">My Thoughts</h1>
+    <button class="newThoughtBtn" (click)="toggleDisplay()" >New Thought</button>
+      <app-post-form  (submitted)="onSubmit($event)" [ngStyle]="{'display' : (formDisplay)? 'block': 'none'}"></app-post-form>
+    <ul id="list-container">
+        <app-post [posts]="posts" (deleted)="onDelete($event)"></app-post>
+    </ul>
+  
 </div>
-<body>
 </body>
-</html>

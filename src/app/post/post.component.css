@@ -1,0 +1,20 @@
+
+li{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color:lightskyblue;
+    list-style-type: none;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding : 20px;
+}
+.post-title,.post-thought{
+    font-family: 'Bebas Neue', cursive;
+}
+#delete{
+    width: 10%;
+    border-radius: 15px;
+    color: white;
+    background-color: black;
+}

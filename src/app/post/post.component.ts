@@ -1,19 +1,20 @@
-import { Component, Input} from '@angular/core';
+import { Component,OnInit,Output,Input,EventEmitter } from '@angular/core';
 import {Post} from '../social';
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css']
 })
-export class PostComponent {
-  @Input() post: Post;
+export class PostComponent implements OnInit {
+  constructor() { }
   
-posts: Post[]=[]
+  ngOnInit(): void {
+  }
 
+  @Input() posts: Post[];
+  total: number[] = [];
 
-deletePost(index: number){
-  this.posts.splice(index, 1);
-}
-
-
+  @Output() deleted = new EventEmitter<object>();
+  deletePost = (el: Post): void => this.deleted.emit(el);
+  
 }
