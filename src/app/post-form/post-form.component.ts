@@ -8,8 +8,8 @@ import {NgForm} from '@angular/forms'
   styleUrls: ['./post-form.component.css']
 })
 export class PostFormComponent {
-  @Output() submitted = new EventEmitter<object>();
-  submitPost = (f: NgForm) => this.submitted.emit({title: f.value.title, thought: f.value.thought});
+  @Output() submit = new EventEmitter<object>();
+  submitPost = (f: NgForm) => this.submit.emit({title: f.value.title, thought: f.value.thought});
 
   posts: Post[]=[];
 

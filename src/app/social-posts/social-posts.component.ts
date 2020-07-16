@@ -9,17 +9,12 @@ import {NgForm} from '@angular/forms'
 })
 
 export class SocialPostsComponent  {
-
+  submitPost = (f: NgForm) => this.submitted.emit({title: f.value.title, thought: f.value.thought});
 posts: Post[] = [];
 
 
-onSubmit(submitted: NgForm) {
-  this.posts.push(
-    {
-      title: submitted.value.title,
-      thought: submitted.value.thought
-    }
-  );
+onSubmit(event: object) {
+  this.posts.push(event);
 }
 
 isDisplay = true;
