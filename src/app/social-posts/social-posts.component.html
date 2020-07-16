@@ -9,8 +9,8 @@
 <div class="page-container">
 <h1 class="pageTitle">My Thoughts</h1>
 <button class="newThoughtBtn" (click)="toggleDisplay()">New Thought</button>
-<app-post></app-post>
-<app-post-form [hidden] ="isDisplay"></app-post-form>
+<app-post *ngFor="let post of posts" [post]="post"></app-post>
+<app-post-form [hidden] ="isDisplay" (submit)="onSubmit($event)"></app-post-form>
 </div>
 <body>
 </body>

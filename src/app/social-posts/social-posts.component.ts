@@ -1,7 +1,6 @@
-import { Component,Input } from '@angular/core';
+import { Component,OnInit} from '@angular/core';
 import {Post} from '../social';
 import {NgForm} from '@angular/forms'
-import { PostFormComponent } from '../post-form/post-form.component';
 
 @Component({
   selector: 'app-social-posts',
@@ -10,8 +9,9 @@ import { PostFormComponent } from '../post-form/post-form.component';
 })
 
 export class SocialPostsComponent  {
-  
+
 posts: Post[] = [];
+
 
 onSubmit(submitted: NgForm) {
   this.posts.push(
