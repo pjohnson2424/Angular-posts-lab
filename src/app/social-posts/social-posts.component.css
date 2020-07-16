@@ -1,0 +1,95 @@
+body{
+    display: flex;
+    font-family: 'Dosis', sans-serif;
+}
+
+.pageTitle{
+    display: flex;
+    justify-content: center;
+    font-family: 'Dosis', sans-serif;
+}
+.newThoughtBtn{
+    font-family: 'Dosis', sans-serif;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width:30%;
+    padding: 5px;
+    border-radius: 12px;
+    background-color: lightskyblue;
+
+}
+.page-container{
+    background-color: lightgray;
+    padding:10px;
+}
+.thoughtArea{
+    background-color: blueviolet;
+}
+.postList{
+   font-family: 'Dosis', sans-serif;
+    display: flex;
+    padding: 5px;
+    border-radius: 12px;
+    background-color: lightskyblue;
+    
+    
+}
+li{
+    display: flex;
+    justify-content: center;
+    background-color:lightskyblue;
+    list-style-type: none;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding : 20px;
+}
+*{
+    font-family: 'Dosis', sans-serif;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top:20px;
+    background-color: rgb(83, 83, 83);
+    width: 35%;
+    color: white;
+    border-radius: 10px;
+    
+    
+}
+.form-titleBox{
+    display: flex;
+    width: 80%;
+    height: 20px;
+    margin: 0 auto 10px;
+    
+}
+.form-thoughtBox{
+    display: flex;
+    width: 80%;
+    height: 80px;
+    margin: 0 auto 10px;
+
+}
+.formTitleTitle{
+    margin-top: 10px;
+}
+.postBtn{
+   border-radius: 15px;
+width: 30%;
+margin: 0 auto;
+}
+.remove {
+    display: inline-block;
+    color: white;
+    background-color: gray;
+    border: none;
+}
+.pageTitle{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}

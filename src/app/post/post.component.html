@@ -1,0 +1,10 @@
+<ul class="post-list">
+    <h1>POSTS:</h1> 
+    <li *ngFor="let post of posts; index as i">
+        <div class ="PostContainer">
+            <span class="titlePost">Title: {{ post.title }}</span>
+              <span class="thoughtPost">Thought: {{post.thought}}</span> 
+        </div>
+       <button class="remove" (click)="deletePost(i)">Remove Post</button>
+    </li>
+</ul>

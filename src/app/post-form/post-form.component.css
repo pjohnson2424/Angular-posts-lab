@@ -1,0 +1,38 @@
+*{
+    font-family: 'Dosis', sans-serif;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top:20px;
+    background-color: rgb(83, 83, 83);
+    width: 35%;
+    color: white;
+    border-radius: 10px;
+    
+    
+}
+.form-titleBox{
+    display: flex;
+    width: 80%;
+    height: 20px;
+    margin: 0 auto 10px;
+    
+}
+.form-thoughtBox{
+    display: flex;
+    width: 80%;
+    height: 80px;
+    margin: 0 auto 10px;
+
+}
+.formTitleTitle{
+    margin-top: 10px;
+}
+.postBtn{
+   border-radius: 15px;
+width: 30%;
+margin: 0 auto;
+}

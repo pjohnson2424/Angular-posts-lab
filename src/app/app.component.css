@@ -1,0 +1,12 @@
+body{
+    display: flex;
+}
+
+.pageTitle{
+    display: flex;
+    justify-content: center;
+}
+.newThoughtBtn{
+    display: flex;
+    justify-content: center;
+}

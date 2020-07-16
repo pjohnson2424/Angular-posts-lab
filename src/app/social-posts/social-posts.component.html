@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<div class="page-container">
+<h1 class="pageTitle">My Thoughts</h1>
+<button class="newThoughtBtn" (click)="toggleDisplay()">New Thought</button>
+<app-post></app-post>
+<app-post-form [hidden] ="isDisplay"></app-post-form>
+</div>
+<body>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<form  #submitted="ngForm" class="container"(ngSubmit)="onSubmit(submitted); submitted.reset()">
+    <div>
+            <label class="formTitleTitle" for="title">Title</label>
+            <input id="title" type="text" class="form-titleBox" name="title" ngModel required>
+    </div>
+    <div>
+            <label for="thought">Thought</label>
+            <input id="thought" type="text" class="form-thoughtBox" name="thought" ngModel required>
+            <button (click)="onSubmit(submitted)">Add Post</button>
+    </div>        
+    </form>
